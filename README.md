@@ -1,2 +1,3 @@
 # Escritor_mediante_voz
-Realizado con python, programa grafico capaz de escuchar tu voz, y escribir lo que dices en el tipo de archivo de texto escogido.
+Proyecto de código abierto, es un programa gráfico que escribe todo lo que pasa por el micrófono, crea un archivo de texto y guarda el contenido en el automáticamente, tiene una interfaz gráfica en la que puedes escoger el tipo de archivo que deseas que se guarde o si quieres que lo guarde en distintos tipos de archivos al mismo tiempo😄
+
