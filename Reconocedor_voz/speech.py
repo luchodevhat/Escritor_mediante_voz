@@ -2,6 +2,7 @@
 import speech_recognition as sr
 
 def recognition():
+
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
@@ -27,6 +28,9 @@ def append(text):
     with open("Archivos/test.txt", "a", encoding="utf-8") as f:
         f.write(text)
         f.write("\n")
+
+
+
 
 
 if __name__ == '__main__':
