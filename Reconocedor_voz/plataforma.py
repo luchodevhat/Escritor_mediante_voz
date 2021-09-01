@@ -23,9 +23,9 @@ button_1 = Button(frame, text="Archivo .txt", width=20, height=2)
 button_1.place(x=100, y=150)
 button_1.config(bg="gray50")
 
-button_1 = Button(frame, text="Varios .txt", width=20, height=2)
-button_1.place(x=100, y=200)
-button_1.config(bg="gray50")
+button_2 = Button(frame, text="Varios", width=20, height=2)
+button_2.place(x=100, y=200)
+button_2.config(bg="gray50")
 
 root.mainloop()
 
