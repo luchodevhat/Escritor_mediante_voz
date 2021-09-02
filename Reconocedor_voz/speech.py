@@ -1,7 +1,21 @@
 
 import speech_recognition as sr
 
-def recognition():
+
+def write(names):
+    with open("Archivos/test.txt", "w", encoding="utf-8") as f:
+        for name in names:
+            f.write(name)
+            f.write("\n")
+
+
+def append(text):
+    with open("Archivos/test.txt", "a", encoding="utf-8") as f:
+        f.write(text)
+        f.write("\n")
+
+
+def recognition():   # se encarga de reconocer la voz y convertirla en un microfono
 
     r = sr.Recognizer()
 
@@ -16,18 +30,6 @@ def recognition():
             print("Lo siento no logro entender....")
 
 
-
-def write(names):
-    with open("Archivos/test.txt", "w", encoding="utf-8") as f:
-        for name in names:
-            f.write(name)
-            f.write("\n")
-
-
-def append(text):
-    with open("Archivos/test.txt", "a", encoding="utf-8") as f:
-        f.write(text)
-        f.write("\n")
 
 
 
