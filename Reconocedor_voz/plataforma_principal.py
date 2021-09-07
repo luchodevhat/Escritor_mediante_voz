@@ -1,5 +1,5 @@
 from tkinter import *
-
+from plataforma_txt import *
 
 class Apertura():
     def __init__(self):
@@ -7,8 +7,6 @@ class Apertura():
         self.root.title("Voz a texto")
         self.root.resizable(0, 0)
 
-
-    def interfaz(self):
         # FramePrincipal
         frame = Frame(self.root, width=420, height=280)
         frame.pack()
@@ -24,7 +22,7 @@ class Apertura():
         button_0.place(x=100, y=100)
         button_0.config(bg="gray50")
 
-        button_1 = Button(frame, text="Archivo .txt", width=20, height=2, command=lambda : self.opcion_txt())
+        button_1 = Button(frame, text="Archivo .txt", width=20, height=2, command=lambda: self.opcion_txt_menu())
         button_1.place(x=100, y=150)
         button_1.config(bg="gray50")
 
@@ -34,19 +32,14 @@ class Apertura():
 
         self.root.mainloop()
 
-
-    def opcion_txt(self):  # trabajando desde aqui
-        root2 = Tk()
-        root2.title("Archivo txt")
-        root2.resizable(0, 0)
-
-        root2.mainloop()
+    def opcion_txt_menu(self):
+        self.root.destroy()
+        menu2 = Apertura_txt()
 
 
 
 if __name__ == '__main__':
     menu = Apertura()
-    menu.interfaz()
 
 
 

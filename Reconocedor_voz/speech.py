@@ -13,22 +13,14 @@ def write(names):  # # Este metodo sobreescribe el archivo
 
 def append(text):  # se encarga de agregar texto al archivo
 
-    choice = input("Deseas guardar el texto en el archivo o lo deseas volver a grabar? ")
+    print("El archivo se esta guardando....")
+    with open("Reconocedor_voz/Archivos/test.txt", "a", encoding="utf-8") as f:
+        f.write(text)
+        f.write("\n")
+    print("El archivo se ha guardado correctamente....")
 
-    if choice == "guardar":
-        print("El archivo se esta guardando....")
-        with open("Reconocedor_voz/Archivos/test.txt", "a", encoding="utf-8") as f:
-            f.write(text)
-            f.write("\n")
-        print("El archivo se ha guardado")
 
-    elif choice == "grabar":
-        print("La grabacion volvera a iniciar...")
-        recognition()
 
-    else:
-        print("Lo siento no has escrito bien")
-        append(text)
 
 
 def read():  # se encarga de mostrar el contenido del texto
@@ -52,7 +44,8 @@ def recognition():   # se encarga de reconocer la voz y convertirla en un microf
         try:
             text = r.recognize_google(audio, language='es-ES')
             print("Lo que dijiste fue : {}".format(text))
-            append(text)
+            #append(text)
+            return text
 
         except:
             print("Lo siento no logro entender....")
