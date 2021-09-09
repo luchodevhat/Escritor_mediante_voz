@@ -14,7 +14,7 @@ def write(names):  # # Este metodo sobreescribe el archivo
 def append(text):  # se encarga de agregar texto al archivo
 
     print("El archivo se esta guardando....")
-    with open("Reconocedor_voz/Archivos/test.txt", "a", encoding="utf-8") as f:
+    with open("Archivos/test.txt", "a", encoding="utf-8") as f:
         f.write(text)
         f.write("\n")
     print("El archivo se ha guardado correctamente....")
