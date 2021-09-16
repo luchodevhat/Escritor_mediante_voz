@@ -2,19 +2,22 @@
 import speech_recognition as sr
 
 
-def write(names):  # # Este metodo sobreescribe el archivo
+def write(name):  # # Este metodo sobreescribe el archivo
 
-    with open("Archivos/test.txt", "w", encoding="utf-8") as f:
-        for name in names:
-            f.write(name)
-            f.write("\n")
+    ubication = "Archivos/" + name + ".txt"
+    with open(ubication, "w", encoding="utf-8") as f:
+        f.write(name)
+        f.write("\n")
 
 
 
-def append(text):  # se encarga de agregar texto al archivo
+
+def append(text, nombre):  # se encarga de agregar texto al archivo
+
+    ubication = "Archivos/" + nombre + ".txt"
 
     print("El archivo se esta guardando....")
-    with open("Archivos/test.txt", "a", encoding="utf-8") as f:
+    with open(ubication, "a", encoding="utf-8") as f:
         f.write(text)
         f.write("\n")
     print("El archivo se ha guardado correctamente....")
@@ -26,9 +29,9 @@ def append(text):  # se encarga de agregar texto al archivo
 def read():  # se encarga de mostrar el contenido del texto
     numbers = []
 
-    with open("Archivos/number.txt", "r", encoding="utf-8") as f:
+    with open("Archivos/test.txt", "r", encoding="utf-8") as f:
         for line in f:
-            numbers.append(int(line))
+            numbers.append(str(line))
     print(numbers)
 
 

@@ -1,5 +1,6 @@
 from tkinter import *
 from plataforma_txt import *
+from plataforma_principal import *
 from plataforma_doc import *
 
 
@@ -25,18 +26,31 @@ class Apertura_dos():
         button_0.place(x=100, y=100)
         button_0.config(bg="gray50")
 
-        button_1 = Button(frame, text="Existente", width=20, height=2, command=lambda: self.exitente())
+        button_1 = Button(frame, text="Existente", width=20, height=2, command=lambda: read())
         button_1.place(x=100, y=150)
         button_1.config(bg="gray50")
 
+        button_2 = Button(frame, text="Volver", width=20, height=2, command=lambda: self.volver())
+        button_2.place(x=100, y=200)
+        button_2.config(bg="red")
 
         self.root.mainloop()
 
     def nuevo(self):
+        nombre = input("Digita el nombre del archivo")
+        write(nombre)
+        self.root.destroy()
+        menu2 = Apertura_txt(texto='', nombre=nombre)
+
+
+    def leer(self):
         pass
 
-    def exitente(self):
-        pass
+    def volver(self):
+        self.root.destroy()
+        menu1 = Apertura()
+
+
 
 if __name__ == '__main__':
     menu = Apertura_dos()

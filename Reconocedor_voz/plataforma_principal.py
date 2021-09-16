@@ -1,4 +1,5 @@
 from tkinter import *
+from plataforma_dos import *
 from plataforma_txt import *
 from plataforma_doc import *
 
@@ -34,7 +35,9 @@ class Apertura():
         self.root.mainloop()
 
     def opcion_txt_menu(self):
-        menu2 = Apertura_txt()
+        self.root.destroy()
+        menu_1 = Apertura_dos()
+
 
     def opcion_word(self):
         menu3 = Apertura_word()
