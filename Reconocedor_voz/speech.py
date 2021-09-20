@@ -25,7 +25,6 @@ def append(text, nombre):  # se encarga de agregar texto al archivo
 
 
 
-
 def read():  # se encarga de mostrar el contenido del texto
     numbers = []
 
