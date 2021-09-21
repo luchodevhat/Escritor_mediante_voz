@@ -1,7 +1,7 @@
-from tkinter import *
-from plataforma_txt import *
 from plataforma_principal import *
-from plataforma_doc import *
+from plataforma_txt import *
+from Reconocedor_voz.speech import *
+from plataforma_archivo import *
 
 
 #Trabajando aca
@@ -26,7 +26,7 @@ class Apertura_dos():
         button_0.place(x=100, y=100)
         button_0.config(bg="gray50")
 
-        button_1 = Button(frame, text="Existente", width=20, height=2, command=lambda: read())
+        button_1 = Button(frame, text="Existente", width=20, height=2, command=lambda: self.leer())
         button_1.place(x=100, y=150)
         button_1.config(bg="gray50")
 
@@ -37,14 +37,15 @@ class Apertura_dos():
         self.root.mainloop()
 
     def nuevo(self):
-        nombre = input("Digita el nombre del archivo")
-        write(nombre)
+        self.root.destroy()
+        menu2 = Apertura_Archivo_nuevo()
+
+    def leer(self):
+        nombre = input("Digita el nombre del archivo existente a buscar ")
+        read(nombre)
         self.root.destroy()
         menu2 = Apertura_txt(texto='', nombre=nombre)
 
-
-    def leer(self):
-        pass
 
     def volver(self):
         self.root.destroy()

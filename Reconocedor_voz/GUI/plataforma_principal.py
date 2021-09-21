@@ -1,7 +1,6 @@
-from tkinter import *
-from plataforma_dos import *
-from plataforma_txt import *
-from plataforma_doc import *
+from Reconocedor_voz.GUI.plataforma_dos import *
+from Reconocedor_voz.GUI.plataforma_doc import *
+from Reconocedor_voz.speech import *
 
 class Apertura():
     def __init__(self):

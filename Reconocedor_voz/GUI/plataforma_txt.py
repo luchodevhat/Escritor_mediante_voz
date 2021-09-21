@@ -1,5 +1,5 @@
 from tkinter import *
-from speech import *
+from Reconocedor_voz.speech import *
 
 class Apertura_txt():
     def __init__(self, texto = '', nombre=''):

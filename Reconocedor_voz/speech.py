@@ -2,12 +2,15 @@
 import speech_recognition as sr
 
 
-def write(name):  # # Este metodo sobreescribe el archivo
+def write(name):  #  Este metodo sobreescribe el archivo
 
     ubication = "Archivos/" + name + ".txt"
     with open(ubication, "w", encoding="utf-8") as f:
-        f.write(name)
+        f.write("Archivo creado en el convertidor de voz")
         f.write("\n")
+        f.write("Hecho por Luis Alejandro Alfaro Quesada")
+        f.write("\n")
+
 
 
 
@@ -25,12 +28,15 @@ def append(text, nombre):  # se encarga de agregar texto al archivo
 
 
 
-def read():  # se encarga de mostrar el contenido del texto
+def read(name):  # se encarga de mostrar el contenido del texto
+
+    ubication = "Archivos/" + name + ".txt"
     numbers = []
 
-    with open("Archivos/test.txt", "r", encoding="utf-8") as f:
+    with open(ubication, "r", encoding="utf-8") as f:
         for line in f:
             numbers.append(str(line))
+    print("El contenido del archivo es ")
     print(numbers)
 
 
@@ -46,7 +52,6 @@ def recognition():   # se encarga de reconocer la voz y convertirla en un microf
         try:
             text = r.recognize_google(audio, language='es-ES')
             print("Lo que dijiste fue : {}".format(text))
-            #append(text)
             return text
 
         except:
