@@ -1,5 +1,5 @@
 from tkinter import *
-from speech import *
+from Reconocedor_voz.speech import *
 
 # Trabajando desde aca
 class Apertura_word():
