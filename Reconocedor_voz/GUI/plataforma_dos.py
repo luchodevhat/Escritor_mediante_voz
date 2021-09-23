@@ -2,6 +2,7 @@ from plataforma_principal import *
 from plataforma_txt import *
 from Reconocedor_voz.speech import *
 from plataforma_archivo import *
+from plataforma_archivo_existente import *
 
 
 #Trabajando aca
@@ -41,6 +42,10 @@ class Apertura_dos():
         menu2 = Apertura_Archivo_nuevo()
 
     def leer(self):
+        self.root.destroy()
+        menu2 = Apertura_archivo_existente()
+
+
         nombre = input("Digita el nombre del archivo existente a buscar ")
         read(nombre)
         self.root.destroy()
@@ -50,7 +55,6 @@ class Apertura_dos():
     def volver(self):
         self.root.destroy()
         menu1 = Apertura()
-
 
 
 if __name__ == '__main__':

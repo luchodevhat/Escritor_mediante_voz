@@ -1,6 +1,7 @@
 
 import speech_recognition as sr
 
+# INTERFACE DE FUNCIONES A UTILIZAR DENTRO DEL PROYECTO
 
 def write(name):  #  Este metodo sobreescribe el archivo
 
