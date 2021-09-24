@@ -1,5 +1,6 @@
 
 import speech_recognition as sr
+import os
 
 # INTERFACE DE FUNCIONES A UTILIZAR DENTRO DEL PROYECTO
 
@@ -59,6 +60,14 @@ def recognition():   # se encarga de reconocer la voz y convertirla en un microf
             print("Lo siento no logro entender....")
             print("No se ha podido continuar ya que no se detecta el audio")
 
+
+
+def navigation():  # Se encarga de encontrar nombre y tipo de archivo en un directorio
+    dir = "/Users/Aleja/PycharmProjects/VozE/Reconocedor_voz/Archivos"
+
+    with os.scandir(dir) as ficheros:
+        ficheros = [fichero.name for fichero in ficheros if fichero.is_file()]
+    print(ficheros)
 
 
 

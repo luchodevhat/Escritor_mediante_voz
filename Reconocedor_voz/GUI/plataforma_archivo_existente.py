@@ -9,7 +9,7 @@ class Apertura_archivo_existente():
         self.n2 = StringVar()
 
         # FramePrincipal
-        frame = Frame(self.root, width=420, height=380)
+        frame = Frame(self.root, width=420, height=420)
         frame.pack()
         frame.config(bg="gray20", bd=25)
 
@@ -23,7 +23,6 @@ class Apertura_archivo_existente():
         files = Text()
         files.place(x=70, y=60)
         files.config(width=30, height=10, padx=15, pady=15)
-        self.agregar_nombres(files)
 
 
         # entrada de texto
@@ -33,15 +32,19 @@ class Apertura_archivo_existente():
 
         # Botones
 
-        button_1 = Button(frame, text="Escoger", width=20, height=2, command=lambda: self.escoger())
+        button_1 = Button(frame, text="Buscar", width=20, height=2, command=lambda: self.agregar_nombres())
         button_1.place(x=100, y=300)
-        button_1.config(bg="green")
+        button_1.config(bg="Blue")
+
+        button_2 = Button(frame, text="Escoger", width=20, height=2, command=lambda: self.escoger())
+        button_2.place(x=100, y=350)
+        button_2.config(bg="green")
 
         self.root.mainloop()
 
 
-    def agregar_nombres(self, archivos):  # trabajando desde aqui
-        pass
+    def agregar_nombres(self):  # trabajando desde aqui
+        navigation()
 
 
     def escoger(self):
