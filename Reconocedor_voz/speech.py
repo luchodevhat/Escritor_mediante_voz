@@ -67,7 +67,8 @@ def navigation():  # Se encarga de encontrar nombre y tipo de archivo en un dire
 
     with os.scandir(dir) as ficheros:
         ficheros = [fichero.name for fichero in ficheros if fichero.is_file()]
-    print(ficheros)
+    for i in range(len(ficheros)):
+        print(i+1, " = ",  ficheros[i])
 
 
 
