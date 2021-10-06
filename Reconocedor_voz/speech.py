@@ -70,6 +70,8 @@ def navigation():  # Se encarga de encontrar nombre y tipo de archivo en un dire
     for i in range(len(ficheros)):
         print(i+1, " = ",  ficheros[i])
 
+    return ficheros
+
 
 
 if __name__ == '__main__':

@@ -7,6 +7,7 @@ class Apertura_archivo_existente():
         self.root.resizable(0, 0)
         self.text = Entry()
         self.n2 = StringVar()
+        self.files = Text()
 
         # FramePrincipal
         frame = Frame(self.root, width=420, height=420)
@@ -44,7 +45,9 @@ class Apertura_archivo_existente():
 
 
     def agregar_nombres(self):  # trabajando desde aqui
-        navigation()
+        elements = navigation()
+        for i in range(len(elements)):
+            self.files.insert(elements[i])   # investigar como agregar texto al text
 
 
     def escoger(self):
