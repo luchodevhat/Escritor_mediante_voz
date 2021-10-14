@@ -23,7 +23,7 @@ class Apertura_archivo_existente():
 
         files = Text()
         files.place(x=70, y=60)
-        files.config(width=30, height=10, padx=15, pady=15)
+        files.config(width=30, height=10, padx=15, pady=15, bg="light cyan")
 
 
         # entrada de texto
@@ -44,10 +44,10 @@ class Apertura_archivo_existente():
         self.root.mainloop()
 
 
-    def agregar_nombres(self):  # trabajando desde aqui
+    def agregar_nombres(self):
         elements = navigation()
         for i in range(len(elements)):
-            self.files.insert(elements[i])   # investigar como agregar texto al text
+          self.files.insert(END, elements[i])   # no se agregan los nombres
 
 
     def escoger(self):
