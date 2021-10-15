@@ -20,10 +20,9 @@ class Apertura_archivo_existente():
         label_1.config(bg="peachpuff", relief="groove")
 
         # nombre archivos
-
-        files = Text()
-        files.place(x=70, y=60)
-        files.config(width=30, height=10, padx=15, pady=15, bg="light cyan")
+        self.files = Text()
+        self.files.place(x=70, y=60)
+        self.files.config(width=30, height=10, padx=15, pady=15, bg="light cyan")
 
 
         # entrada de texto
@@ -47,7 +46,8 @@ class Apertura_archivo_existente():
     def agregar_nombres(self):
         elements = navigation()
         for i in range(len(elements)):
-          self.files.insert(END, elements[i])   # no se agregan los nombres
+          self.files.insert(END, elements[i])
+          self.files.insert(END, "  ")
 
 
     def escoger(self):
