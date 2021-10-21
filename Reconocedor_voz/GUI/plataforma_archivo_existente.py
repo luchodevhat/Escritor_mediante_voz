@@ -1,4 +1,5 @@
 from plataforma_txt import *
+from tkinter import messagebox as MessageBox
 
 class Apertura_archivo_existente():
     def __init__(self):
@@ -52,9 +53,16 @@ class Apertura_archivo_existente():
 
     def escoger(self):
         nombre = self.n2.get()
-        read(nombre)
-        self.root.destroy()
-        menu2 = Apertura_txt(texto='', nombre=nombre)
+
+        try:
+            read(nombre)
+            self.root.destroy()
+            menu2 = Apertura_txt(texto='', nombre=nombre)
+
+        except FileNotFoundError:
+            print("El archivo ",nombre, " no se encuentra")
+            MessageBox.showerror("Error", "El archivo no existe")
+
 
 if __name__ == '__main__':
     menu = Apertura_archivo_existente()
