@@ -60,8 +60,9 @@ class Apertura_archivo_existente():
             menu2 = Apertura_txt(texto='', nombre=nombre)
 
         except FileNotFoundError:
-            print("El archivo ",nombre, " no se encuentra")
             MessageBox.showerror("Error", "El archivo no existe")
+            print("El archivo ",nombre, " no se encuentra")
+
 
 
 if __name__ == '__main__':
