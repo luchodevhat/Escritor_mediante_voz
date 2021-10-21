@@ -32,14 +32,21 @@ def append(text, nombre):  # se encarga de agregar texto al archivo
 
 def read(name):  # se encarga de mostrar el contenido del texto
 
-    ubication = "Archivos/" + name + ".txt"
-    numbers = []
+    try:
+        ubication = "Archivos/" + name + ".txt"
+        numbers = []
 
-    with open(ubication, "r", encoding="utf-8") as f:
-        for line in f:
-            numbers.append(str(line))
-    print("El contenido del archivo es ")
-    print(numbers)
+        with open(ubication, "r", encoding="utf-8") as f:
+            for line in f:
+                numbers.append(str(line))
+        print("El contenido del archivo es ")
+        print(numbers)
+
+    except FileNotFoundError:
+        print("El archivo ", name, " no se encuentra")
+
+
+
 
 
 
