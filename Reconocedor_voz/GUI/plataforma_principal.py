@@ -19,9 +19,6 @@ class Apertura():
         label_1.config(bg="peachpuff", relief="groove")
 
         # Botones
-        button_0 = Button(frame, text="Archivo .doc", width=20, height=2, command=lambda : self.opcion_word())
-        button_0.place(x=100, y=100)
-        button_0.config(bg="gray50")
 
         button_1 = Button(frame, text="Archivo .txt", width=20, height=2, command=lambda: self.opcion_txt_menu())
         button_1.place(x=100, y=150)
@@ -36,10 +33,6 @@ class Apertura():
     def opcion_txt_menu(self):
         self.root.destroy()
         menu_1 = Apertura_dos()
-
-
-    def opcion_word(self):
-        menu3 = Apertura_word()
 
 if __name__ == '__main__':
     menu = Apertura()

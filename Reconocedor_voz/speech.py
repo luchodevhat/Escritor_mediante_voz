@@ -14,9 +14,6 @@ def write(name):  #  Este metodo sobreescribe el archivo
         f.write("\n")
 
 
-
-
-
 def append(text, nombre):  # se encarga de agregar texto al archivo
 
     ubication = "Archivos/" + nombre + ".txt"
