@@ -1,5 +1,4 @@
 from Reconocedor_voz.GUI.plataforma_dos import *
-from Reconocedor_voz.GUI.plataforma_doc import *
 from Reconocedor_voz.speech import *
 
 class Apertura():
@@ -21,7 +20,7 @@ class Apertura():
         # Botones
 
         button_1 = Button(frame, text="Archivo .txt", width=20, height=2, command=lambda: self.opcion_txt_menu())
-        button_1.place(x=100, y=150)
+        button_1.place(x=100, y=100)
         button_1.config(bg="gray50")
 
         button_2 = Button(frame, text="Varios", width=20, height=2)

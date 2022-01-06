@@ -3,3 +3,5 @@ Hecho por Luis Alejandro Alfaro Quesada
 esto es una última prueba para decir para verificar Por cuánto tiempo el micrófono está grabando mi voz y Por cuánto tiempo no sé qué más decir
 verificando que todo esté en orden
 Esto es una prueba para ver cómo funciona sin los audífonos
+This is a little test
+Esta es una prueba Para que vean que también canta en español

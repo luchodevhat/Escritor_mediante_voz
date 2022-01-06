@@ -46,6 +46,7 @@ class Apertura_archivo_existente():
 
     def agregar_nombres(self):
         elements = navigation()
+        self.files.insert(END, "Los archivos encontrados son: ")
         for i in range(len(elements)):
           self.files.insert(END, elements[i])
           self.files.insert(END, "  ")
